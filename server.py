@@ -16,6 +16,11 @@ def analyze_emotion():
     # Return the detected emotion scores and dominant emotion in JSON format
     return jsonify(result)
 
+# Define a route for the root URL ("/") to render the index.html template
+@app.route("/", methods=["GET"])
+def render_index_page():
+    return render_template('index.html')
+
 # Your emotion_detector function here
 
 if __name__ == "__main__":
